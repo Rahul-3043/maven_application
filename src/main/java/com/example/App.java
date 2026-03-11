@@ -1,11 +1,13 @@
+package com.example;
+
 public class App {
-    public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) throws InterruptedException {
 
         System.out.println("My First Maven Application");
 
-        while(true) {
-            System.out.println("Application running...");
-            Thread.sleep(10000);
-        }
+        Thread.sleep(300000); // 5 minutes
+
     }
+
 }
