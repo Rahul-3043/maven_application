@@ -1,13 +1,7 @@
-FROM gocd/gocd-agent-ubuntu-22.04:v23.5.0
+FROM eclipse-temurin:17-jre-alpine
 
-USER root
+WORKDIR /app
 
-RUN apt update && \
-    apt install -y \
-    openjdk-17-jdk \
-    maven \
-    docker.io \
-    git \
-    bash
+COPY *.jar app.jar
 
-USER go
+CMD ["java","-jar","app.jar"]
